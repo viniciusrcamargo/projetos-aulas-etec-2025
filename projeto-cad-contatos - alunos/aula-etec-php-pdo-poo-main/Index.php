@@ -1,8 +1,4 @@
-<?php
 
-require './src/Contato.php';
-
-$contato = new Contato();
 
 if($_SERVER['REQUEST_METHOD'] ==='POST'){
     $contato->insert($_POST);
