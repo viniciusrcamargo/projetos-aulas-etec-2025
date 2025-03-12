@@ -1,8 +1,6 @@
 
 
-if($_SERVER['REQUEST_METHOD'] ==='POST'){
-    $contato->insert($_POST);
-}
+
 
 ?>
 
