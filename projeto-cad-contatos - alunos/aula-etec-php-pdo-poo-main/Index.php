@@ -28,19 +28,17 @@
     <fieldset class="formulario container">
         <form action="" class="formLista" >
             <table>
-                <?php foreach ($contato->select() as $lista){?>
                     <tr>
                         <th>Nome</th>
                         <th>E-mail</th>
                     </tr>
                     <tr>
-                        <td class="coluna"><?php echo $lista[1];?></td>
-                        <td class="coluna"><?php echo $lista[2];?></td>
-                        <td class="coluna"><?php echo $lista[3];?></td>
-                        <td ><a class="botao-editar" href="Edit.php?id=<?php echo $lista[0]; ?>">Editar</a></td>
-                        <td ><a class="botao-excluir" href="Delete.php?id=<?php echo $lista[0]; ?>">Excluir</a></td>
+                        <td class="coluna"></td>
+                        <td class="coluna"></td>
+                        <td class="coluna"></td>
+                        <td ><a class="botao-editar" href="Edit.php?id=">Editar</a></td>
+                        <td ><a class="botao-excluir" href="Delete.php?id=">Excluir</a></td>
                     </tr>
-                <?php } ?>
             </table>
         </form>
     </fieldset>
