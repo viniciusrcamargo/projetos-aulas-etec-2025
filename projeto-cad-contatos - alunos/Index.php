@@ -1,3 +1,13 @@
+<?php
+
+require './src/Contato.php';
+
+$contato = new Contato();//instancia da Classe Contato
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $contato->insert($_POST);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,17 +38,20 @@
     <fieldset class="formulario container">
         <form action="" class="formLista" >
             <table>
+                <?php foreach($contato->select() as $contato) {?>
                     <tr>
                         <th>Nome</th>
+                        <th>Endereço</th>
                         <th>E-mail</th>
                     </tr>
                     <tr>
-                        <td class="coluna"></td>
-                        <td class="coluna"></td>
-                        <td class="coluna"></td>
-                        <td ><a class="botao-editar" href="Edit.php?id=">Editar</a></td>
-                        <td ><a class="botao-excluir" href="Delete.php?id=">Excluir</a></td>
+                        <td class="coluna"><?php echo $contato[1];?></td>
+                        <td class="coluna"><?php echo $contato[2];?></td>
+                        <td class="coluna"><?php echo $contato[3];?></td>
+                        <td ><a class="botao-editar" href="Edit.php?id=<?php echo $contato[0];?>">Editar</a></td>
+                        <td ><a class="botao-excluir" href="Delete.php?id=<?php echo $contato[0];?>">Excluir</a></td>
                     </tr>
+                    <?php }?>
             </table>
         </form>
     </fieldset>
