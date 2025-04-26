@@ -64,7 +64,7 @@ class Contato
     }
 
     //atualiza os dados da tabela contatos, através de dados enviados da tela
-    public function updade($dados)
+    public function update($dados)
     {
         try {
             //var_dump($dados);
