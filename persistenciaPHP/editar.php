@@ -7,7 +7,7 @@ $nome = '';
 $email = '';
 $mensagem = '';
 
-if($id){
+if($id == true){
      
 }
 
